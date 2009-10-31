@@ -2,9 +2,13 @@ Clippy - Helping you copy text to your clipboard
 ================================================
 
 Clippy is a very simple Flash widget that makes it possible to place arbitrary
-text onto the client's clipboard. Here is what Clippy looks like on GitHub:
+text onto the client's clipboard. This version is pretty much the same as that of 
+mojombo, but it doesn't include the text label next to the icon - instead if saying
+'copied!' the icon will simply include a tick. Here is what Clippy (v2) looks like
+on Codebase:
 
-![Clippy in action](http://img.skitch.com/20090213-cjiawnwig8udf5a6qf1c45cne8.png)
+![Clippy in action](http://img.skitch.com/20091031-jrwg9k74eg62gpysjxup2qdqjn.jpg)
+![Clippy in action](http://img.skitch.com/20091031-jdin8kwrjek7ai4dcxupbb5ixq.jpg)
 
 Here is a sample Rails (Ruby) helper that can be used to place Clippy on a
 page:
@@ -12,8 +16,8 @@ page:
     def clippy(text, bgcolor='#FFFFFF')
       html = <<-EOF
         <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
-                width="110"
-                height="14"
+                width="10"
+                height="12"
                 id="clippy" >
         <param name="movie" value="/flash/clippy.swf"/>
         <param name="allowScriptAccess" value="always" />
@@ -22,8 +26,8 @@ page:
         <param NAME="FlashVars" value="text=#{text}">
         <param name="bgcolor" value="#{bgcolor}">
         <embed src="/flash/clippy.swf"
-               width="110"
-               height="14"
+               width="10"
+               height="12"
                name="clippy"
                quality="high"
                allowScriptAccess="always"
@@ -59,23 +63,6 @@ SWF, run the following from Clippy's root directory:
 
 If that is successful, copy `build/clippy.swf` to your
 `public` directory or wherever your static assets can be found.
-
-Contribute
-----------
-
-If you'd like to hack on Clippy, start by forking my repo on GitHub:
-
-http://github.com/mojombo/clippy
-
-The best way to get your changes merged back into core is as follows:
-
-1. Clone down your fork
-1. Create a topic branch to contain your change
-1. Hack away
-1. If you are adding new functionality, document it in README.md
-1. If necessary, rebase your commits into logical chunks, without errors
-1. Push the branch up to GitHub
-1. Send me (mojombo) a pull request for your branch
 
 License
 -------
