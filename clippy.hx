@@ -18,6 +18,11 @@ class Clippy {
     
     button.addEventListener(MouseEvent.MOUSE_UP, function(e:MouseEvent) {
       flash.system.System.setClipboard(text);
+      button.upState = flash.Lib.attach("button_clicked");
+    });
+    
+    button.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent) {
+      button.upState = flash.Lib.attach("button_up");
     });
     
     flash.Lib.current.addChild(button);
