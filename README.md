@@ -7,8 +7,8 @@ mojombo, but it doesn't include the text label next to the icon - instead if say
 'copied!' the icon will simply include a tick. Here is what Clippy (v2) looks like
 on Codebase:
 
-![Clippy in action](http://img.skitch.com/20091031-jrwg9k74eg62gpysjxup2qdqjn.jpg)
-![Clippy in action](http://img.skitch.com/20091031-jdin8kwrjek7ai4dcxupbb5ixq.jpg)
+* ![Clippy in action](http://img.skitch.com/20091103-xpbjd6ptfju36ugc3dqtn8jnug.jpg)
+* ![Clippy in action](http://img.skitch.com/20091103-b1syhbgkj8q5deicp7b1cnrrup.jpg)
 
 Here is a sample Rails (Ruby) helper that can be used to place Clippy on a
 page:
