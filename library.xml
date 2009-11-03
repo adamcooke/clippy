@@ -6,6 +6,8 @@
       <clip id="button_over" import="assets/button_over.png"/>
       <clip id="button_down" import="assets/button_down.png"/>
       <clip id="button_clicked" import="assets/button_clicked.png"/>
+      <clip id="button_clicked_over" import="assets/button_clicked_over.png"/>
+      <clip id="button_clicked_down" import="assets/button_clicked_down.png"/>
     </library>
   </frame>
 </movie>

@@ -6,9 +6,6 @@ class Clippy {
   // Main
   static function main() {
     var text:String = flash.Lib.current.loaderInfo.parameters.text;
-        
-    // button
-    
     var button:SimpleButton = new SimpleButton();
     button.useHandCursor = true;
     button.upState = flash.Lib.attach("button_up");
@@ -19,10 +16,11 @@ class Clippy {
     button.addEventListener(MouseEvent.MOUSE_UP, function(e:MouseEvent) {
       flash.system.System.setClipboard(text);
       button.upState = flash.Lib.attach("button_clicked");
+      button.overState = flash.Lib.attach("button_clicked_over");
+      button.downState = flash.Lib.attach("button_clicked_down");
     });
     
     button.addEventListener(MouseEvent.MOUSE_OVER, function(e:MouseEvent) {
-      button.upState = flash.Lib.attach("button_up");
     });
     
     flash.Lib.current.addChild(button);
